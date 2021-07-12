@@ -8,9 +8,9 @@ body, html, #root {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #445777;
-  color: #1e2432;
   height: 100%;
+  background: linear-gradient(180deg, rgba(175,196,202,1) 0%, rgba(194,144,137,1) 100%);
+  background: linear-gradient(180deg, rgb(152, 194, 206) 0%, rgb(196, 132, 123) 100%);
 }
 
 .main-container {
@@ -18,7 +18,8 @@ body, html, #root {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100%;
+  color: #1e2432;
+  margin: auto;
 }
 
 .search-container{
@@ -26,13 +27,13 @@ body, html, #root {
   justify-content: center;
   margin-bottom: 2rem;
   border-radius: 20px;
-  box-shadow: 0px 3px 5px 0px rgba(15, 15, 15, 0.404);
+  box-shadow: 0px 2px 5px 0px rgba(15, 15, 15, 0.253);
 }
 
 button{
   padding: 1rem;
   border: none;
-  background-color: rgba(250, 250, 250, 0.85);
+  background-color: rgba(250, 250, 250, 0.445);
   cursor: pointer;
   border-radius: 0px 20px 20px 0px;
 }
@@ -47,11 +48,11 @@ button{
   border: none;
   width: 11.5rem;
   border-radius: 20px 0px 0px 20px;
-  background: rgba(250, 250, 250, 0.85);
+  background: rgba(250, 250, 250, 0.445);
   
 }
 
-.city-card {
+.city-card-cold {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,8 +60,20 @@ button{
   padding: 1.5rem 2.3rem;
   border-radius: 20px;
   width: 15rem;
-  background: rgba(250, 250, 250, 0.85);
-  box-shadow: 0px 3px 5px 0px rgba(15, 15, 15, 0.404);
+  box-shadow: 0px 2px 5px 0px rgba(15, 15, 15, 0.253);
+  background-color: rgba(176, 196, 202, 0.445)
+}
+
+.city-card-hot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem 2.3rem;
+  border-radius: 20px;
+  width: 15rem;
+  box-shadow: 0px 3px 5px 0px rgba(15, 15, 15, 0.253);
+  background-color: rgba(194, 144, 137, 0.445);
 }
 
 p {
@@ -77,7 +90,11 @@ p {
   text-align: center;
 }
 
-.city-card sup {
+.city-card-cold sup {
+  font-size: 0.5em;
+}
+
+.city-card-hot sup {
   font-size: 0.5em;
 }
 
@@ -131,7 +148,11 @@ p {
       width: 16.5rem;
   }
 
-  .city-card {
+  .city-card-hot {
       width: 20rem;
   }
+
+  .city-card-cold {
+    width: 20rem;
+}
 }

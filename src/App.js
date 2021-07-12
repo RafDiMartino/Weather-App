@@ -4,6 +4,7 @@ import { fetchWeather } from "./api/fetchWeather";
 import { useState } from 'react';
 import { MdSearch } from 'react-icons/md'
 
+
 function App() {
 
   const [query, setQuery] = useState("");
@@ -49,7 +50,7 @@ function App() {
         <button onClick={searchBTN} aria-label="search button"><MdSearch className="search-icon"/></button>
       </form>
       {weather.main && (
-        <div className="city-card">
+        <div className={weather.main.temp <= 20 ? "city-card-cold" : "city-card-hot"}>
           <h2 className="city-name">
             <span className="city">{weather.name}</span>
             <sup>{weather.sys.country}</sup>
