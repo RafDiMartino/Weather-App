@@ -22,5 +22,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "linear-gradient(180deg, rgb(152, 194, 206) 0%, rgb(196, 132, 123) 100%)"
+  "background_color": "#ffffff"
 }
