@@ -1,5 +1,5 @@
 const CACHE_NAME = "version-1";
-const urlToCache = ["index.html", "offline.html"];
+const urlsToCache = ["index.html", "offline.html"];
 
 self.addEventListener("install", (event) => {
     event.waitUntil(
